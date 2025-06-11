@@ -1,0 +1,24 @@
+{
+  "name": "custom-mediafusion",
+  "version": "1.0.0",
+  "description": "![Media Fusion Logo](resources/images/mediafusion_logo.png?raw=true)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+  "start": "node server.js",
+  "build": "echo \"No build step needed\""
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donatelloroberto/custom-mediafusion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donatelloroberto/custom-mediafusion/issues"
+  },
+  "homepage": "https://github.com/donatelloroberto/custom-mediafusion#readme"
+}
