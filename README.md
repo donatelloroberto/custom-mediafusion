@@ -71,6 +71,9 @@
 
 ### Kodi Add-on Installation
 
+> MediaFusion works on Kodi TV and desktop. If you want a local zip for manual
+> installation, run `npm run build-kodi`.
+
 #### Method 1: Install via Repository (Recommended)
 1. Launch Kodi
 2. Go to Settings (⚙️ gear icon) → File manager
@@ -97,7 +100,11 @@
 
 #### Method 2: Manual Installation
 1. **Kodi**: Install Kodi from [here](https://kodi.tv/download)
-2. **MediaFusion Zip**: Download the latest [plugin.video.mediafusion.zip](https://github.com/mhdzumair/MediaFusion/releases) from releases
+2. **MediaFusion Zip**: Download the latest [plugin.video.mediafusion.zip](https://github.com/mhdzumair/MediaFusion/releases) from releases, **or** build it locally by running:
+   ```bash
+   npm run build-kodi
+   ```
+   The generated zip will be located in the `kodi` directory.
 3. Launch Kodi
 4. Go to Add-ons → Add-on browser (box icon) → Install from zip file
 5. Navigate to the downloaded zip file and select it
