@@ -1,15 +1,14 @@
-{
-  "name": "custom-mediafusion",
-  "version": "1.0.0",
-  "description": "![Media Fusion Logo](resources/images/mediafusion_logo.png?raw=true)",
-  "main": "index.js",
+ {
+   "name": "custom-mediafusion",
+   "version": "1.0.0",
+   "main": "index.js",
+   "scripts": {
+    "start": "node index.js",
+    "build": "echo \"No build step required when using Vercel builder\""
+   },
   "directories": {
     "doc": "docs"
   },
-  "scripts": {
-  "start": "node server.js",
-  "build": "echo \"No build step needed\""
-},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/donatelloroberto/custom-mediafusion.git"
