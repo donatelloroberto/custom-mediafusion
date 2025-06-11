@@ -251,7 +251,6 @@ function showConfirmationDialog(validationErrors, torrentData, infoHash) {
                             <div class="alert alert-warning">
                                 <strong>Community Guidelines:</strong>
                                 <ul class="mb-0">
-                                    <li>Do not upload adult or inappropriate content</li>
                                     <li>Only upload content that matches the IMDb title</li>
                                     <li>Avoid spamming</li>
                                 </ul>

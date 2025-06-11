@@ -24,7 +24,7 @@ from utils import const
 from utils.config import config_manager
 from utils.const import STREAMING_PROVIDERS_SHORT_NAMES, CERTIFICATION_MAPPING
 from utils.network import encode_mediaflow_proxy_url
-from utils.runtime_const import TRACKERS, MANIFEST_TEMPLATE, ADULT_PARSER
+from utils.runtime_const import TRACKERS, MANIFEST_TEMPLATE
 from utils.validation_helper import validate_m3u8_or_mpd_url_with_cache
 
 
@@ -56,7 +56,6 @@ async def filter_and_sort_streams(
         "Size Limit Exceeded": 0,
         "Quality Not Selected": 0,
         "Language Not Selected": 0,
-        "Strict 18+ Keyword Filter": 0,
         "No Cached Streams": 0,
     }
 
@@ -103,9 +102,7 @@ async def filter_and_sort_streams(
             filtered_reasons["Language Not Selected"] += 1
             continue
 
-        if is_contain_18_plus_keywords(stream.torrent_name):
-            filtered_reasons["Strict 18+ Keyword Filter"] += 1
-            continue
+
 
         filtered_streams.append(stream)
 
@@ -680,10 +677,8 @@ def is_contain_18_plus_keywords(title: str) -> bool:
     """
     Check if the title contains 18+ keywords to filter out adult content.
     """
-    if not settings.adult_content_filter_in_torrent_title:
-        return False
-
-    return ADULT_PARSER.parse(title).get("adult", False)
+    # Adult content filtering disabled
+    return False
 
 
 def calculate_max_similarity_ratio(
@@ -777,8 +772,5 @@ def create_content_warning_message(metadata) -> str:
         f"Certification: {cert_emoji} {cert_level}\n"
         f"Nudity Status: {nudity_emoji} {metadata.parent_guide_nudity_status}"
     )
-
-    if "Adult" in metadata.genres:
-        message += "\n🔞 Genre: Adult (Strict 18+ Filter Applied)"
 
     return message

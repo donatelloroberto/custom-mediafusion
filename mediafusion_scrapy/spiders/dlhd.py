@@ -48,8 +48,8 @@ class DaddyLiveHDChannelsSpider(scrapy.Spider):
 
         # Filter out closed channels and store active ones
         for channel in channels:
-            # Skip closed or NSFW channels
-            if channel.get("is_nsfw") or channel.get("closed"):
+            # Skip closed channels
+            if channel.get("closed"):
                 continue
 
             # Store both the main name and alternate names for matching
@@ -105,11 +105,6 @@ class DaddyLiveHDChannelsSpider(scrapy.Spider):
 
             title = channel_link.css("strong::text").get()
             if not title:
-                continue
-
-            # Skip adult content
-            if "18+" in title:
-                logging.info(f"Skipping adult content channel: {title}")
                 continue
 
             # Extract channel ID from the href
