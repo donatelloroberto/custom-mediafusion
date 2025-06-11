@@ -115,11 +115,6 @@ These settings define the basic configuration and identity of your MediaFusion i
 - **telegram_bot_token**: Telegram bot token for notifications about contribution streams.
 - **telegram_chat_id**: Telegram chat ID for notifications.
 
-## Content Filtering Settings
-
-- **adult_content_regex_keywords**: Regex pattern for filtering adult content.
-- **adult_content_filter_in_torrent_title** (default: `True`): Enable adult content filtering in torrent titles.
-
 ## Feature Toggles
 
 - **enable_rate_limit** (default: `False`): Enable/disable rate limiting.

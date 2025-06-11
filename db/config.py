@@ -131,13 +131,6 @@ class Settings(BaseSettings):
     scrape_with_aka_titles: bool = True
     enable_fetching_torrent_metadata_from_p2p: bool = True
 
-    # Content Filtering
-    adult_content_regex_keywords: str = (
-        r"(^|\b|\s|$|[\[._-])"
-        r"(18\s*\+|adults?|porn|sex|xxx|nude|boobs?|pussy|ass|bigass|bigtits?|blowjob|hardfuck|onlyfans?|naked|hot|milf|slut|doggy|anal|threesome|foursome|erotic|sexy|18\s*plus|trailer|RiffTrax|zipx)"
-        r"(\b|\s|$|[\]._-])"
-    )
-    adult_content_filter_in_torrent_title: bool = True
 
     # Time-related Settings
     meta_cache_ttl: int = 1800  # 30 minutes in seconds
