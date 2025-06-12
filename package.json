@@ -1,24 +1,25 @@
- {
+{
    "name": "custom-mediafusion",
    "version": "1.0.0",
    "main": "index.js",
    "scripts": {
-    "start": "node index.js",
-    "build": "echo \"No build step required when using Vercel builder\"",
-    "build-kodi": "make -C kodi"
+      "start": "node index.js",
+      "build": "echo \"No build step required when using Vercel builder\"",
+      "build-kodi": "make -C kodi"
    },
-  "directories": {
-    "doc": "docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/donatelloroberto/custom-mediafusion.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/donatelloroberto/custom-mediafusion/issues"
-  },
-  "homepage": "https://github.com/donatelloroberto/custom-mediafusion#readme"
+   "directories": {
+      "doc": "docs"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/donatelloroberto/custom-mediafusion.git"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/donatelloroberto/custom-mediafusion/issues"
+   },
+   "homepage": "https://github.com/donatelloroberto/custom-mediafusion#readme",
+   "description": "![Media Fusion Logo](resources/images/mediafusion_logo.png?raw=true)"
 }
